@@ -1,2 +1,10 @@
 server:
   port: 9999
+
+
+#qs线程池配置
+qs:
+  threadPool:
+    coreSize: 5
+    maxSize: 10
+    name: qs-
