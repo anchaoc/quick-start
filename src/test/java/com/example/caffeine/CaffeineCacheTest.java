@@ -10,7 +10,11 @@ import java.util.concurrent.ExecutionException;
 public class CaffeineCacheTest {
 
 
-
+    /**
+     * 测试CaffeineCache
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
     @Test
     public void test() throws ExecutionException, InterruptedException {
         CaffeineCache caffeineCache = new CaffeineCache();

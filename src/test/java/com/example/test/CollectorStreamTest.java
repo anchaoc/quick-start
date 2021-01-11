@@ -1,6 +1,5 @@
 package com.example.test;
 
-import cn.hutool.core.collection.CollUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -8,9 +7,13 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class CollectorStreamTest {
 
+    /**
+     * 排序去重复转链表
+     */
     @Test
     public  void test1() {
         ArrayList<Integer> integerArrayList = new ArrayList<>();
@@ -24,9 +27,25 @@ public class CollectorStreamTest {
 
     }
 
+    /**
+     * 测试流累加
+     */
     @Test
     public void test2(){
-        ArrayList<Integer> arrayList = CollUtil.newArrayList(1, 3, 4, 5, 2, 8);
+        int sumNumber = IntStream.iterate(1, x -> x + 1).limit(500000000).reduce(0,Integer::sum);
+        System.out.println(sumNumber);
+    }
+
+    /**
+     * 测试for累加
+     */
+    @Test
+    public void test3(){
+        int sumNumber=0;
+        for (int i = 1; i <=500000000 ; i++) {
+            sumNumber+=i;
+        }
+        System.out.println(sumNumber);
     }
 
 }
