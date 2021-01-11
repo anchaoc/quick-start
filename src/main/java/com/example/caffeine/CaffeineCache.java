@@ -4,6 +4,7 @@ import com.github.benmanes.caffeine.cache.AsyncLoadingCache;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +13,7 @@ import java.util.function.Function;
 /**
  * Caffeine Cache提供了三种缓存填充策略：手动、同步加载和异步加载。
  */
+@Component
 public class CaffeineCache {
 
     /**
@@ -78,6 +80,12 @@ public class CaffeineCache {
 
     public CompletableFuture<Object> setAsyncValue(String key){
         return CompletableFuture.supplyAsync(() -> {
+            try {
+                //假设执行任务需要的时间
+                Thread.sleep(1000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return key + "value";
         });
     }
