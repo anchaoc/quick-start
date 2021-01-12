@@ -7,3 +7,4 @@
 - guava https://mvnrepository.com/artifact/com.google.guava/guava
 - fastjson https://mvnrepository.com/artifact/com.alibaba/fastjson
 - gson https://mvnrepository.com/artifact/com.google.code.gson/gson
+- logback日志打印参数配置 com/example/filter
