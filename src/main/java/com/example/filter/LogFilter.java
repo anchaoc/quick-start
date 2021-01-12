@@ -24,8 +24,8 @@ public class LogFilter extends MDCInsertingServletFilter {
         } finally {
             try {
                 MDC.remove("userId");
-            } catch (IllegalArgumentException illegalArgumentException) {
-                log.warn("LogFilter MDC remove userId warn :",illegalArgumentException);
+            } catch (Exception exception) {
+                log.warn("LogFilter MDC remove userId warn :",exception);
             }
         }
     }
