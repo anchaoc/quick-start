@@ -1,4 +1,4 @@
-#
+# quick start
 - 架构：springboot no datasource
 - 简化代码 https://mvnrepository.com/artifact/org.projectlombok/lombok
 - jdk工具集合 https://mvnrepository.com/artifact/cn.hutool/hutool-all 
