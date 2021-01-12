@@ -1,10 +1,4 @@
-server:
-  port: 9999
+ spring:
+  profiles:
+    active: dev
 
-
-#qs线程池配置
-qs:
-  threadPool:
-    coreSize: 5
-    maxSize: 10
-    name: qs-
