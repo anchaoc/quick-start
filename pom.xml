@@ -17,6 +17,8 @@
     <properties>
         <java.version>1.8</java.version>
         <skipTest>true</skipTest>
+        <mapstruct.version>1.2.0.Final</mapstruct.version>
+
     </properties>
 
     <dependencies>
@@ -109,7 +111,11 @@
             <version>8.0.17</version>
         </dependency>
         <!--mybatis plus and freemarker and mysql-connector 生成表对应的bean、mapper、xml-->
-
+        <!-- apache.commons lang3-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
 
