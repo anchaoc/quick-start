@@ -16,7 +16,7 @@ public class InterfaceTest extends BaseTest {
         if (interfaceMap ==null) {
             System.out.println("null");
         }
-        Interface a = interfaceMap.get("b");
-        System.out.println("b:"+a);
+        Interface a = interfaceMap.get("v");
+        System.out.println("a:"+a);
     }
 }

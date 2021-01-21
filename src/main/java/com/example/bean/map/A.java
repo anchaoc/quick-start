@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
  * @author anchao
  * @since 1.0
  */
-@Service("a")
+@Service("v")
 public class A implements Interface{
 }

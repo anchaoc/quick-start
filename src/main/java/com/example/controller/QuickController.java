@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.aspect.UnknownExResult;
 import com.example.common.Result;
 import com.example.exception.CaffeineException;
 import com.example.exception.ExceptionEnum;
@@ -16,7 +17,9 @@ public class QuickController {
 
 
     @GetMapping("get")
+    @UnknownExResult
     public Result<String> get() {
+        //int a =1/0;
         return Result.success("success");
     }
 
