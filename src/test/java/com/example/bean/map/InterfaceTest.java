@@ -19,4 +19,6 @@ public class InterfaceTest extends BaseTest {
         Interface a = interfaceMap.get("v");
         System.out.println("a:"+a);
     }
+
+
 }
