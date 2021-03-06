@@ -85,7 +85,7 @@ public class CodeGenerator {
         // 【实体】是否为lombok模型（默认 false）
         strategy.setEntityLombokModel(true);
         strategy.setInclude(
-                "liquidation_order_fill"
+                "ledger"
         );
         // 驼峰转连字符
         strategy.setControllerMappingHyphenStyle(true);
