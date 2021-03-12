@@ -6,6 +6,7 @@ import com.example.exception.CaffeineException;
 import com.example.exception.ExceptionEnum;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,6 +25,7 @@ public class QuickController {
     }
 
     @GetMapping("caffeineCache")
+    @ResponseBody
     public void testCaffeineCache() {
         throw new CaffeineException(ExceptionEnum.FAIL);
     }
